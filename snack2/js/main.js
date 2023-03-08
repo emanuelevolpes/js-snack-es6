@@ -67,25 +67,30 @@ const ulContainer = document.getElementById('list');
 //     ulContainer.append(nomeTemplate);
 // });
 
-const grades = listaStudenti.filter((element) => {
-    if (element.Grades > 70) {
+// const grades = listaStudenti.filter((element) => {
+//     if (element.Grades > 70) {
+//         const nomeTemplate = template.content.cloneNode(true);
+
+//         nomeTemplate.querySelector('.li').innerHTML = `nome studente: ${element.Name.toUpperCase()} grado: ${element.Id} `
+        
+//         ulContainer.append(nomeTemplate);
+//         return true;
+//     };
+//     return false;
+// });
+
+// console.log(grades);
+
+const id = listaStudenti.filter((element) => {
+    if (element.Grades > 70 && element.Id > 120) {
         const nomeTemplate = template.content.cloneNode(true);
 
-        nomeTemplate.querySelector('.li').innerHTML = `nome studente: ${element.Name.toUpperCase()} grado: ${element.Id} `
-        
+        nomeTemplate.querySelector('.li').innerHTML = `nome studente: ${element.Name} grado: ${element.Grades} id: ${element.Id}`
+
         ulContainer.append(nomeTemplate);
         return true;
     };
     return false;
 });
 
-console.log(grades);
-
-// const id = listaStudenti.filter((element) => {
-//     if (element.Grades > 70 && element.Id > 120) {
-//         return true;
-//     };
-//     return false;
-// });
-
-// console.log(id);
+console.log(id);
