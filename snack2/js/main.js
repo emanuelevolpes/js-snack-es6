@@ -54,4 +54,8 @@ const listaStudenti = [
     }
 ];
 
-console.log(listaStudenti);
+const nomeStudenti = listaStudenti.map((element) => {
+    return element.Name.toUpperCase();
+});
+
+console.log(nomeStudenti);
