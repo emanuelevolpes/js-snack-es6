@@ -54,26 +54,33 @@ const listaStudenti = [
     }
 ];
 
+const template = document.getElementById('list-template');
+const ulContainer = document.getElementById('list');
+
+
+
 const nomeStudenti = listaStudenti.map((element) => {
-    return element.Name.toUpperCase();
+    const nomeTemplate = template.content.cloneNode(true);
+    
+    nomeTemplate.querySelector('.li').innerHTML = element.Name.toUpperCase();
+
+    ulContainer.append(nomeTemplate);
 });
 
-console.log(nomeStudenti);
+// const grades = listaStudenti.filter((element) => {
+//     if (element.Grades > 70) {
+//         return true;
+//     };
+//     return false;
+// });
 
-const grades = listaStudenti.filter((element) => {
-    if (element.Grades > 70) {
-        return true;
-    };
-    return false;
-});
+// console.log(grades);
 
-console.log(grades);
+// const id = listaStudenti.filter((element) => {
+//     if (element.Grades > 70 && element.Id > 120) {
+//         return true;
+//     };
+//     return false;
+// });
 
-const id = listaStudenti.filter((element) => {
-    if (element.Grades > 70 && element.Id > 120) {
-        return true;
-    };
-    return false;
-});
-
-console.log(id);
+// console.log(id);
