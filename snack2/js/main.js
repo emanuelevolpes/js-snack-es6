@@ -59,3 +59,12 @@ const nomeStudenti = listaStudenti.map((element) => {
 });
 
 console.log(nomeStudenti);
+
+const grades = listaStudenti.filter((element) => {
+    if (element.Grades >= 70) {
+        return true;
+    };
+    return false;
+});
+
+console.log(grades);
