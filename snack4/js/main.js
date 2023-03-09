@@ -77,14 +77,17 @@ const team = [
     }
 ];
 
-team.forEach((element) => {
-
+const myTeam = team.map((element) => {
     let puntiFattiRnd = getRndInteger(1, 100);
     let falliSubitiRnd = getRndInteger(1, 100);
-    
     element.puntiFatti = puntiFattiRnd;
     element.falliSubiti = falliSubitiRnd;
-
+    return element;
 });
 
-console.log(team);
+const myTeamB = myTeam.map((element) => {
+    const {nome, falliSubiti} = element;
+    return {nome, falliSubiti};
+});
+
+console.log(myTeamB)
