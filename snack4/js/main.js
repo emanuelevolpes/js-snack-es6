@@ -8,57 +8,83 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
 BONUS
 Stampare in pagina oltre che in console!*/
 
+/*
++++++++++++++
+Functions
++++++++++++++
+*/
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+/*
+++++++++
+Main
+++++++++
+*/
+
 const team = [
     {
         nome: 'Atalanta',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Bologna',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Cremonese',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Empoli',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Fiorentina',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Hellas Verona',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Inter',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Juventus',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Lazio',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     },
     {
         nome: 'Lecce',
-        'punti fatti': 0,
-        'falli subiti': 0
+        puntiFatti: 0,
+        falliSubiti: 0
     }
 ];
+
+team.forEach((element) => {
+
+    let puntiFattiRnd = getRndInteger(1, 100);
+    let falliSubitiRnd = getRndInteger(1, 100);
+    
+    element.puntiFatti = puntiFattiRnd;
+    element.falliSubiti = falliSubitiRnd;
+
+});
 
 console.log(team);
