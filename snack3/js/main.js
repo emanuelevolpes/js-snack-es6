@@ -34,4 +34,11 @@ const bike = [
     }
 ];
 
-console.log(bike);
+const weight = bike.map((element) => {
+    const {peso} = element;
+    return peso;    
+});
+
+const min = Math.min.apply(Math, weight);
+
+console.log(`la bicicletta più leggera pesa ${min} kg`);
