@@ -58,34 +58,37 @@ const template = document.getElementById('list-template');
 const ulContainer = document.getElementById('list');
 
 
-
-// const nomeStudenti = listaStudenti.map((element) => {
-//     const nomeTemplate = template.content.cloneNode(true);
+const nomeStudenti = listaStudenti.map((element) => {
+    const nomeTemplate = template.content.cloneNode(true);
     
-//     nomeTemplate.querySelector('.li').innerHTML = element.Name.toUpperCase();
+    nomeTemplate.querySelector('.li').innerHTML = element.Name.toUpperCase();
 
-//     ulContainer.append(nomeTemplate);
-// });
+    ulContainer.append(nomeTemplate);
 
-// const grades = listaStudenti.filter((element) => {
-//     if (element.Grades > 70) {
-//         const nomeTemplate = template.content.cloneNode(true);
+    return element.Name.toUpperCase();
+});
 
-//         nomeTemplate.querySelector('.li').innerHTML = `nome studente: ${element.Name.toUpperCase()} grado: ${element.Id} `
+console.log(nomeStudenti);
+
+const grades = listaStudenti.filter((element) => {
+    if (element.Grades > 70) {
+        const nomeTemplate = template.content.cloneNode(true);
+
+        nomeTemplate.querySelector('.li').innerHTML = `Name: ${element.Name} Grade: ${element.Id} `
         
-//         ulContainer.append(nomeTemplate);
-//         return true;
-//     };
-//     return false;
-// });
+        ulContainer.append(nomeTemplate);
+        return true;
+    };
+    return false;
+});
 
-// console.log(grades);
+console.log(grades);
 
 const id = listaStudenti.filter((element) => {
     if (element.Grades > 70 && element.Id > 120) {
         const nomeTemplate = template.content.cloneNode(true);
 
-        nomeTemplate.querySelector('.li').innerHTML = `nome studente: ${element.Name} grado: ${element.Grades} id: ${element.Id}`
+        nomeTemplate.querySelector('.li').innerHTML = `Name: ${element.Name} Grade: ${element.Grades} Id: ${element.Id}`
 
         ulContainer.append(nomeTemplate);
         return true;

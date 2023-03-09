@@ -8,8 +8,6 @@ Ma la tipografia per stampare il tutto vuole che le mandiamo una lista di ospiti
 un oggetto javascript che ha come attributi: nome del tavolo, nome dell’ospite e posto occupato.
 Generiamo e stampiamo in console la lista per i segnaposto.*/
 
-const TavoloVip = 'Tavolo Vip';
-
 const nomeTavolo = [
     'Brad Pitt',
     'Johnny Depp',
@@ -25,10 +23,10 @@ const nomeTavolo = [
 
 const listaTipografia = nomeTavolo.map((element, index) => {
     return {
-        nomeTavolo: TavoloVip,
-        nomeOspite: element,
-        postoOccupato: index
-    }
+        'nome del tavolo': 'Tavolo Vip',
+        "nome dell'ospite": element,
+        'posto occupato': index + 1
+    };
 });
 
 console.log(listaTipografia);
